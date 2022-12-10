@@ -9,3 +9,6 @@ __pycache__
 ez_setup.py
 get-pip.py
 *.swp
+.RData
+*.svg
+*.png
