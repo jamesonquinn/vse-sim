@@ -211,7 +211,7 @@ class CsvBatch:
             while os.path.isfile(baseName + str(i) + ".csv"):
                 i += 1
         myFile = open(baseName + (str(i) if newFile else "") + ".csv", "w")
-        dw = csv.DictWriter(myFile, self.rows[0].keys(), restval="NA")
+        dw = csv.DictWriter(myFile, self.rows[0].keys(), restval="NA", extrasaction='ignore')
         dw.writeheader()
         for r in self.rows:
             dw.writerow(r)
